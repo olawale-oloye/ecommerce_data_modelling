@@ -1,8 +1,9 @@
-dbt sources:
+version: 2
+
+sources:
     - name: ecommerce_data_modelling # Source system name
       database: ECOMMERCE_DWH # Optional: database where source is stored
       schema: ECOMMERCE_STAGING # Schema containing the source tables
-      
       tables:
         - name: addresses # Table name as it exists in the database
         - name: categories
