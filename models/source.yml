@@ -1,5 +1,5 @@
 dbt sources:
-    - name: ecommerce_dwh # Source system name
+    - name: ecommerce_data_modelling # Source system name
       database: ecommerce_dwh # Optional: database where source is stored
       schema: ecommerce_staging # Schema containing the source tables
       
