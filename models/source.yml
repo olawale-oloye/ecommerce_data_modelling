@@ -1,0 +1,14 @@
+dbt sources:
+    - name: ecommerce_dwh # Source system name
+      database: ecommerce_dwh # Optional: database where source is stored
+      schema: ecommerce_staging # Schema containing the source tables
+      
+      tables:
+        - name: addresses # Table name as it exists in the database
+        - name: categories
+        - name: customers
+        - name: orders
+        - name: order_items
+        - name: payments
+        - name: products
+
