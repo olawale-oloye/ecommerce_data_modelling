@@ -1,15 +1,18 @@
 version: 2
 
 sources:
-    - name: ecommerce_data_modelling # Source system name
-      database: ECOMMERCE_DWH # Optional: database where source is stored
-      schema: ECOMMERCE_STAGING # Schema containing the source tables
-      tables:
-        - name: addresses # Table name as it exists in the database
-        - name: categories
-        - name: customers
-        - name: orders
-        - name: order_items
-        - name: payments
-        - name: products
-
+  - name: ecommerce_data_modelling # Source system name
+    database: ECOMMERCE_DWH # Optional: database where source is stored
+    schema: ECOMMERCE_STAGING # Schema containing the source tables
+    tables:
+      - name: addresses # Table name as it exists in the database
+      - name: categories
+      - name: customers
+        columns:
+          - name: id
+            tests:
+              - not_null
+      - name: orders
+      - name: order_items
+      - name: payments
+      - name: products
