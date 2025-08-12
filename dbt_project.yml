@@ -37,8 +37,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   ecommerce_data_modelling:
-    # Applies to all files under models/example/
-    example:
-      +materialized: table
     bronze:
       +materialized: table
+      +schema: BRONZE
+    silver:
+      +materialized: table
+      +schema: SILVER
+    gold:
+      +materialized: table
+      +schema: GOLD

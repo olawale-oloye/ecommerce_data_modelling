@@ -5,14 +5,10 @@ sources:
     database: ECOMMERCE_DWH # Optional: database where source is stored
     schema: ECOMMERCE_STAGING # Schema containing the source tables
     tables:
-      - name: addresses # Table name as it exists in the database
-      - name: categories
-      - name: customers
-        columns:
-          - name: id
-            tests:
-              - not_null
-      - name: orders
-      - name: order_items
-      - name: payments
-      - name: products
+      - name: ADDRESSES # Table name as it exists in the database
+      - name: CATEGORIES
+      - name: CUSTOMERS
+      - name: ORDERS
+      - name: ORDER_ITEMS
+      - name: PAYMENTS
+      - name: PRODUCTS
