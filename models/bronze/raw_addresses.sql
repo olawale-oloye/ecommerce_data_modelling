@@ -1,4 +1,4 @@
-with customers_table as (
+with raw_addresses as (
     SELECT 
 UPDATED_AT
     ID, CITY, COUNTRY, CREATED_AT, CUSTOMER_ID, POSTAL_CODE, STATE, STREET, 
@@ -7,5 +7,4 @@ UPDATED_AT
 ) 
 
 
-
-SELECT * FROM customers_table
+SELECT * FROM raw_addresses
