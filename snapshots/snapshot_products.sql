@@ -3,10 +3,10 @@
 {{
     config(
       target_schema='snapshots',
-      unique_key='id',
-      strategy='check',
-      check_cols=['name', 'description', 'price', 'is_active', 'category_id'],
-      invalidate_hard_deletes=True,
+      unique_key=['name'],
+      strategy='timestamp',
+      updated_at='updated_at'
+    
     )
 }}
 
