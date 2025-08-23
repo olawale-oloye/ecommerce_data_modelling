@@ -20,7 +20,7 @@ dim_date as (
 select
     {{ dbt_utils.generate_surrogate_key(['oi.order_id', 'oi.product_id']) }} as sale_sk,
     o.order_sk,
-    -- p.product_sk,
+    p.product_sk,
     c.customers_sk,
     a.address_sk,
     d.date_sk,
