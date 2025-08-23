@@ -26,7 +26,9 @@ select
     d.date_sk,
     oi.quantity as quantity_sold,
     oi.price_per_unit as price_per_unit,
-    (oi.quantity * oi.price_per_unit) as total_amount
+    (oi.quantity * oi.price_per_unit) as total_amount,
+    o.order_date,
+    p.effective_date
 from silver_order_items oi
 join dim_order o on oi.order_id = o.id
 join dim_customer c on o.customer_id = c.id
